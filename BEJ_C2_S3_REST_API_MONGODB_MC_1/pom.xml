@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
+    <parent>
+        <groupId>com.niit.jdp</groupId>
+        <artifactId>BEJ_C3_S4_Create_Microservices_Using_Spring_Boot_MC_1</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <groupId>com.niit.jdp</groupId>
-    <artifactId>BEJ_C2_S3_REST_API_MONGODB_MC_1</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
+    <artifactId>C2_S3_REST_API_MONGODB_PC1</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>C2_S3_REST_API_MONGODB_PC1</name>
+    <description>Demo project for Spring Boot</description>
     <properties>
-        <maven.compiler.source>19</maven.compiler.source>
-        <maven.compiler.target>19</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>11</java.version>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
