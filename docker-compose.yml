@@ -56,9 +56,14 @@ services:
       - mynetwork
     ports:
       - 9007:9007
-
-
-
+  eureka-service:
+    container_name: containerEureka
+    build: EurekaServer/
+    restart: always
+    networks:
+      - mynetwork
+    ports:
+      - 8761:8761
 networks:
   mynetwork:
     driver: bridge
