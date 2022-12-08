@@ -20,6 +20,7 @@
   <modules>
     <module>BEJ_C2_S3_REST_API_MONGODB_MC_1</module>
     <module>UserAuthentication</module>
+    <module>SpringCloudAPIGateway</module>
   </modules>
 
   <build>
@@ -46,16 +47,7 @@
       <scope>test</scope>
     </dependency>
 
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
 
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-    </dependency>
 
     <dependency>
       <groupId>io.jsonwebtoken</groupId>

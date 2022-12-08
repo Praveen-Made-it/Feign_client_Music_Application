@@ -17,7 +17,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/trackData/")
+@RequestMapping("/api/v1/")
 public class TrackController {
     private TrackService trackService;
 

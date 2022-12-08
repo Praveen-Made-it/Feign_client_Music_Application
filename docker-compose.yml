@@ -1,19 +1,20 @@
 version: '3.9'
 services:
   music-service:
-    image: musicimage
-    container_name: musicservice
+    image: music_image
+    container_name: music-service
     build: BEJ_C2_S3_REST_API_MONGODB_MC_1/
     restart: always
     networks:
       - mynetwork
     ports:
-      - 8085:8085
+      - 8091:8091
     depends_on:
-      - mongoService
+      - mongoservice
+      - cloudapiservice
 
 
-  mongoService:
+  mongoservice:
     image: mongo
     container_name: mongoservice
     ports:
@@ -22,21 +23,21 @@ services:
       - mynetwork
 
   authentication-service:
-    image: authenticationimagemusic
-    container_name: authenticationContainermusic
+    image: authentication_image
+    container_name: authentication-service
     build: UserAuthentication/
     restart: always
     networks:
       - mynetwork
     ports:
-      - 8080:8080
+      - 8082:8082
     depends_on:
-      - mysqlService
+      - mysqlservice
+      - cloudapiservice
 
-
-  mysqlService:
+  mysqlservice:
     image: mysql:latest
-    container_name: mysqlService
+    container_name: mysqlservice
     networks:
       - mynetwork
     ports:
@@ -46,6 +47,16 @@ services:
       MYSQL_USERNAME: root
       MYSQL_PASSWORD: root
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+
+  cloudapiservice:
+    image: apigateway-service
+    build: SpringCloudAPIGateway/
+    restart: always
+    networks:
+      - mynetwork
+    ports:
+      - 9007:9007
+
 
 
 networks:
