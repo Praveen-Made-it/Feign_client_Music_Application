@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @FeignClient(name = "authentication-service", url = "authentication-service:8082")
-public interface TrackProxy {
+public interface UserProxy {
     @PostMapping("/api/v2/register/")
     public ResponseEntity<?> saveUser(@RequestBody Track user);
 
