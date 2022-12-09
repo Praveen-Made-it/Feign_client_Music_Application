@@ -1,4 +1,4 @@
-package com.niit.UserAuthentication.exception;
+package com.niit.jdp.UserAuthentication.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

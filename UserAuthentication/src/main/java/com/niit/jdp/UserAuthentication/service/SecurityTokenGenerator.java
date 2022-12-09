@@ -1,6 +1,6 @@
-package com.niit.UserAuthentication.service;
+package com.niit.jdp.UserAuthentication.service;
 
-import com.niit.UserAuthentication.domain.UserModel;
+import com.niit.jdp.UserAuthentication.domain.UserModel;
 
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package com.niit.UserAuthentication.domain;
+package com.niit.jdp.UserAuthentication.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

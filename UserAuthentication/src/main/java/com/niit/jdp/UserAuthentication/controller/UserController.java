@@ -1,10 +1,10 @@
-package com.niit.UserAuthentication.controller;
+package com.niit.jdp.UserAuthentication.controller;
 
-import com.niit.UserAuthentication.domain.UserModel;
-import com.niit.UserAuthentication.exception.UserAlreadyExistException;
-import com.niit.UserAuthentication.exception.UserNotFoundException;
-import com.niit.UserAuthentication.service.SecurityTokenGenerator;
-import com.niit.UserAuthentication.service.UserService;
+import com.niit.jdp.UserAuthentication.domain.UserModel;
+import com.niit.jdp.UserAuthentication.exception.UserAlreadyExistException;
+import com.niit.jdp.UserAuthentication.exception.UserNotFoundException;
+import com.niit.jdp.UserAuthentication.service.SecurityTokenGenerator;
+import com.niit.jdp.UserAuthentication.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
