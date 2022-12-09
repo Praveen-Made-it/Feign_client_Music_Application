@@ -15,15 +15,19 @@ public class Track {
     @Id
     private int trackId;
     private String trackName;
+    private String email;
+    private String password;
     private double trackRating;
     private Artist trackArtist;
 
     public Track() {
     }
 
-    public Track(int trackId, String trackName, double trackRating, Artist trackArtist) {
+    public Track(int trackId, String trackName, String email, String password, double trackRating, Artist trackArtist) {
         this.trackId = trackId;
         this.trackName = trackName;
+        this.email = email;
+        this.password = password;
         this.trackRating = trackRating;
         this.trackArtist = trackArtist;
     }
@@ -42,6 +46,22 @@ public class Track {
 
     public void setTrackName(String trackName) {
         this.trackName = trackName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public double getTrackRating() {
@@ -65,6 +85,8 @@ public class Track {
         return "Track{" +
                 "trackId=" + trackId +
                 ", trackName='" + trackName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
                 ", trackRating=" + trackRating +
                 ", trackArtist=" + trackArtist +
                 '}';
