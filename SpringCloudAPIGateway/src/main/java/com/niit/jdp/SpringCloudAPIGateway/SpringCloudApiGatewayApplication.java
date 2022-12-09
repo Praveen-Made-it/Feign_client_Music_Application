@@ -17,7 +17,7 @@ public class SpringCloudApiGatewayApplication {
 
 	@Bean
 	public RouteLocator getRoutes(RouteLocatorBuilder builder) {
-		return builder.routes().route(p -> p.path("/api/v1/**").uri("lb://music-service/"))
-				.route(p -> p.path("/api/v2/**").uri("lb://authentication-service/")).build();
+		return builder.routes().route(p -> p.path("/api/v1/**").uri("http://music-service:8091/"))
+				.route(p -> p.path("/api/v2/**").uri("http://authentication-service:8082/")).build();
 	}
 }
